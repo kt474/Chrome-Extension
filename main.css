@@ -1,0 +1,29 @@
+body {
+  background-image: url("img/bground.jpg");
+  background-size: cover;
+}
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  /* border: 1px solid red; */
+  width: 75%;
+  margin: auto;
+  position: relative;
+  top: 15%;
+  transform: perspective(1px) translateY(-15%);
+  height: 50%;
+  padding-right: 10px;
+}
+#card {
+  flex: 0 0 auto;
+  /* border: 1px solid #fff; */
+  padding: 10px;
+  margin: 10px;
+  width: 65%;
+  height: 90%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.26), 0 0 8px rgba(0, 0, 0, 0.18);
+}
