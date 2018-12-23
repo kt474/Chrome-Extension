@@ -4,7 +4,7 @@
 body {
   background-image: url("img/bground.jpg");
   background-size: cover;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   /* background-color: red; */
   background-repeat: no-repeat;
   /* background-position-y: 45px; */
@@ -55,6 +55,10 @@ body {
   font-size: 1.75em;
   /* border: 1px solid red; */
 }
+.weatherwidget-io {
+  /* display: inline; */
+}
+
 #top {
   /* border: 1px solid purple; */
   margin-bottom: -65px;
