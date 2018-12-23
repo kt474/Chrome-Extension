@@ -5,9 +5,9 @@ body {
   background-image: url("img/bground.jpg");
   background-size: cover;
   overflow-x: hidden;
-  background-color: #f0f0f0;
+  /* background-color: red; */
   background-repeat: no-repeat;
-  background-position-y: 40px;
+  /* background-position-y: 45px; */
 }
 #scrolling-wrapper {
   display: flex;
@@ -17,7 +17,7 @@ body {
   width: 98%;
   margin: auto;
   position: relative;
-  top: 10%;
+  top: 9%;
   transform: perspective(1px) translateY(-10%);
   height: 55%;
   padding-right: 10px;
@@ -26,7 +26,7 @@ body {
   flex: 0 0 auto;
   padding: 10px;
   width: 32%;
-  height: 90%;
+  height: 85%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -41,13 +41,32 @@ body {
 }
 #time {
   font-size: 1.75em;
+  /* border: 1px solid green; */
+  text-align: center;
+  margin-top: 35px;
 }
 #date {
   font-size: 1.75em;
+  /* border: 1px solid blue; */
+  text-align: center;
+  margin-top: 35px;
 }
 #weather {
   font-size: 1.75em;
+  /* border: 1px solid red; */
 }
 #top {
-  border: 1px solid red;
+  /* border: 1px solid purple; */
+  margin-bottom: -65px;
+  width: 100%;
+  text-align: center;
+  margin-top: -15px;
+  /* background-color: red; */
+}
+.weatherwidget-io {
+  height: 200px;
+  color: #4c4c4c;
+}
+#datetime {
+  margin-top: 10px;
 }

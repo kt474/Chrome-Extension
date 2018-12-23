@@ -17,9 +17,20 @@
   <body>
     <div id="top" class="container">
       <div class="row">
-        <div id="date" class="col"></div>
-        <div id="time" class="col"></div>
-        <div id="weather" class="col">Weather</div>
+        <div class="col"><p id="time"></p></div>
+        <div class="col"><p id="date"></p></div>
+        <div id="weather" class="col">
+          <a
+            class="weatherwidget-io"
+            href="https://forecast7.com/en/42d44n76d50/ithaca/?unit=us"
+            data-label_1="ITHACA"
+            data-label_2="WEATHER"
+            data-font="Ubuntu"
+            data-mode="Current"
+            data-days="3"
+            >ITHACA WEATHER</a
+          >
+        </div>
       </div>
     </div>
     <div id="scrolling-wrapper">
@@ -42,5 +53,15 @@
       hour: "2-digit",
       minute: "2-digit"
     });
+    !(function(d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://weatherwidget.io/js/widget.min.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    })(document, "script", "weatherwidget-io-js");
   </script>
 </html>
