@@ -127,7 +127,7 @@
             <div id="heading">
               <input
                 type="text"
-                placeholder="Enter an activity..."
+                placeholder="What do you have to do?"
                 id="item"
                 onKeyPress="enter(event)"
               />
@@ -149,6 +149,7 @@
                   </div>
                 </li> -->
               </ul>
+
               <ul id="completed"></ul>
             </div>
             <!-- end div container-->
@@ -172,8 +173,19 @@
           <!-- <a href="#" class="btn btn-primary">Button</a> -->
         </div>
       </div>
-      <div id="card" class="card"></div>
-      <div id="card" class="card"></div>
+      <!--fourth card-->
+      <div id="card" class="card">
+        <div class="card-body">
+          <h2 class="card-title" id="notes">Notes</h2>
+          <textarea rows="16" cols="46" spellcheck="false"></textarea>
+        </div>
+      </div>
+      <div id="card" class="card">
+        <div class = 'card-body'>
+          <h2 class = card-title' id = 'notes'>Calendar</h2>
+          <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=kt474%40cornell.edu&amp;color=%231B887A&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2328754E&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FNew_York" style="border-width:0" width="388" height="388" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
       <div id="blank"></div>
     </div>
   </body>

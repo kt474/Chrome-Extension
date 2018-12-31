@@ -187,7 +187,7 @@ a:hover {
 }
 .activity li {
   height: 50px;
-  background: #fff;
+  background: #e3f2fd;
   width: 100%;
   border-radius: 5px;
   font-size: 1.4em;
@@ -200,6 +200,7 @@ a:hover {
   padding-right: 40px;
   padding-top: 8px;
   padding-left: 8px;
+  box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.2);
 }
 .listcontainer {
   width: 100%;
@@ -208,7 +209,7 @@ a:hover {
   height: 455px;
   overflow-y: scroll;
 
-  background: #e3f2fd;
+  background: #fff;
   border-radius: 10px;
 }
 .buts button {
@@ -255,20 +256,23 @@ a:hover {
   height: 145px;
   overflow-y: scroll;
 }
-#completed:not(:empty) {
-  padding-top: 70px;
-}
-
 #completed .buts .complete {
   color: #12de61;
 }
-#completed:not(:empty):before {
-  content: "";
-  width: 250px;
-  height: 1px;
-  left: 25%;
-
-  margin: -10px;
-  background: #2196f3;
-  position: absolute;
+#completed li:first-child {
+  margin-top: 50px;
+}
+#notes {
+  text-align: center;
+  font-size: 2em;
+  margin-top: -20px;
+}
+textarea {
+  border: none;
+  box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.2);
+  border-radius: 10px;
+  background: #f5f5f5;
+  resize: none;
+  outline: none;
+  font-size: 1em;
 }
