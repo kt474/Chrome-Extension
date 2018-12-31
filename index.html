@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>New Tab</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <!--google fonts-->
     <link
       href="https://fonts.googleapis.com/css?family=PT+Sans"
@@ -26,6 +28,16 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <script
+      src="http://quotesondesign.com/api/3.0/api-3.0.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="http://quotesondesign.com/api/3.0/api-3.0.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
   </head>
   <body>
     <div id="top" class="container">
@@ -54,55 +66,96 @@
           alt="Card image cap"
           height="250px"
         />
-        <div class="card-body card-body-cascade">
-          <h4 class="card-title">Quick Links</h4>
+        <div class="card-body text-center">
+          <h2 class="card-title" id="subtitle">Quick Links</h2>
           <!-- <p class="card-text"></p> -->
           <!-- <a href="#" class="btn btn-primary">Button</a> -->
-          <span style="font-size: 3em; color: #ff5700">
-            <i class="fab fa-reddit"></i>
-          </span>
-
-          <span style="font-size: 3em; color: #3b5998;">
-            <i class="fab fa-facebook-square"></i>
-          </span>
-
-          <span style="font-size: 3em; color: #0084ff;">
-            <i class="fab fa-facebook-messenger"></i>
-          </span>
-
-          <span style="font-size: 3em; color: #c71610;">
-            <i class="fas fa-envelope"></i>
-          </span>
-
-          <span style="font-size: 3em; color: #ff0000">
-            <i class="fab fa-youtube"></i>
-          </span>
-
-          <span style="font-size: 3em; color: #D5693F;">
-            <i class="fas fa-basketball-ball"></i>
-          </span>
-
-          <span style="font-size: 3em; color: #08A9C5;">
-            <i class="fas fa-money-check-alt"></i>
-          </span>
-
-          <span style="font-size: 3em; color: #ff9900;">
-            <i class="fab fa-amazon"></i>
-          </span>
+          <!-- start first group of 4 div-->
+          <div id="buttons1">
+            <a href="https://www.reddit.com/">
+              <span style="font-size: 2.5em; color: #ff5700">
+                <i class="fab fa-reddit hoverable"></i>
+              </span>
+            </a>
+            <a href="https://www.facebook.com/">
+              <span style="font-size: 2.5em; color: #3b5998;">
+                <i class="fab fa-facebook-square"></i>
+              </span>
+            </a>
+            <a href="https://www.messenger.com">
+              <span style="font-size: 2.5em; color: #0084ff;">
+                <i class="fab fa-facebook-messenger"></i>
+              </span>
+            </a>
+            <a href="https://mail.google.com">
+              <span style="font-size: 2.5em; color: #c71610;">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </a>
+          </div>
+          <!-- end div buttons1-->
+          <a href="https://www.youtube.com/">
+            <span style="font-size: 2.5em; color: #ff0000">
+              <i class="fab fa-youtube"></i>
+            </span>
+          </a>
+          <a href="http://www.espn.com/">
+            <span style="font-size: 2.5em; color: #D5693F;">
+              <i class="fas fa-basketball-ball"></i>
+            </span>
+          </a>
+          <a href="https://www.discover.com/">
+            <span style="font-size: 2.5em; color: #08A9C5;">
+              <i class="fas fa-money-check-alt"></i>
+            </span>
+          </a>
+          <a href="https://www.amazon.com/">
+            <span style="font-size: 2.5em; color: #ff9900;">
+              <i class="fab fa-amazon"></i>
+            </span>
+          </a>
         </div>
       </div>
 
       <div id="card" class="card">
         <!-- <img class="card-img-top" src="" alt="card image" height="150px" /> -->
         <div class="card-body">
-          <h1 class="card-title">Card Title</h1>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus
-            congue ultricies. In bibendum sagittis dui, in consequat mauris
-            facilisis.
-          </p>
-          <a href="#" class="btn btn-primary">Button</a>
+          <!-- <h4 class="card-title" id="intro">What do you have to do today?</h> -->
+          <!-- <h4 id="today">What do you have to do today?</h4> -->
+          <!--start to do list-->
+          <div id="todo">
+            <div id="heading">
+              <input
+                type="text"
+                placeholder="Enter an activity..."
+                id="item"
+                onKeyPress="enter(event)"
+              />
+              <button id="add"><i class="fas fa-plus"></i></button>
+            </div>
+            <!--end div heading-->
+
+            <div class="listcontainer">
+              <ul class="activity" id="selector">
+                <!-- <li>
+                  This is an item
+                  <div class="buts">
+                    <button class="remove">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
+                    <button class="complete">
+                      <i class="fas fa-check"></i>
+                    </button>
+                  </div>
+                </li> -->
+              </ul>
+              <ul id="completed"></ul>
+            </div>
+            <!-- end div container-->
+          </div>
+          <!--end div todo-->
         </div>
+        <!-- end div card-text -->
       </div>
       <div id="card" class="card">
         <img
@@ -112,13 +165,11 @@
           height="250px"
         />
         <div class="card-body">
-          <h4 class="card-title">To-Do</h4>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus
-            congue ultricies. In bibendum sagittis dui, in consequat mauris
-            facilisis.
-          </p>
-          <a href="#" class="btn btn-primary">Button</a>
+          <h2 class="card-title" id="subtitle">Today's Quote</h2>
+          <div id="quotebox">
+            <blockquote id="qod-quote">... loading ...</blockquote>
+          </div>
+          <!-- <a href="#" class="btn btn-primary">Button</a> -->
         </div>
       </div>
       <div id="card" class="card"></div>
@@ -127,6 +178,84 @@
     </div>
   </body>
   <script>
+    //todo list stuff
+    var removeicon = '<i class="far fa-trash-alt"></i>';
+    var addicon = '<i class="fas fa-check"></i>';
+    var addbutton = document.getElementById("add");
+    addbutton.addEventListener("click", function() {
+      console.log("button clicked");
+      var value = document.getElementById("item").value;
+      if (value) {
+        addItem(value);
+        document.getElementById("item").value = "";
+      }
+    });
+    //on enter press
+    function enter(e) {
+      if (e.keyCode === 13) {
+        var value = document.getElementById("item").value;
+        if (value) {
+          addItem(value);
+          document.getElementById("item").value = "";
+        }
+      }
+    }
+    // addbutton.addEventListener("keypress", function(event) {
+    //   event.preventDefault();
+    //   if (event.keyCode === 13) {
+    //     console.log("test");
+    //   }
+    // });
+    function removeItem() {
+      var item = this.parentNode.parentNode;
+      var parent = item.parentNode;
+      parent.removeChild(item);
+    }
+    function completeItem() {
+      var item = this.parentNode.parentNode;
+      var parent = item.parentNode;
+      var id = parent.id;
+      var target;
+      if (id == "selector") {
+        target = document.getElementById("completed");
+      } else {
+        target = document.getElementById("selector");
+      }
+      parent.removeChild(item);
+      target.classList.add("activity");
+      target.insertBefore(item, target.childNodes[0]);
+    }
+    function addItem(text) {
+      var list = document.getElementById("selector");
+
+      var item = document.createElement("li");
+      item.innerText = text;
+
+      var buttons = document.createElement("div");
+      buttons.classList.add("buts");
+      var remove = document.createElement("button");
+      //buttons.classList.add("remove");
+      remove.addEventListener("click", removeItem);
+
+      remove.innerHTML = removeicon;
+
+      var add = document.createElement("button");
+      //buttons.classList.add("add");
+      add.addEventListener("click", completeItem);
+      add.innerHTML = addicon;
+
+      remove.classList.add("remove");
+      add.classList.add("complete");
+      buttons.appendChild(remove);
+      buttons.appendChild(add);
+
+      item.appendChild(buttons);
+
+      //list.appendChild(item);
+      list.insertBefore(item, list.childNodes[0]);
+    }
+
+    //date and time stuff
     var dt = new Date();
     document.getElementById("date").innerHTML = dt.toLocaleDateString("en-En", {
       weekday: "long",
@@ -137,6 +266,7 @@
       hour: "2-digit",
       minute: "2-digit"
     });
+    //weather stuff
     !(function(d, s, id) {
       var js,
         fjs = d.getElementsByTagName(s)[0];

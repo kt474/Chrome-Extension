@@ -5,7 +5,8 @@
 body {
   background-image: url("img/bground.jpg");
   background-size: cover;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
+  overflow: hidden;
   /* background-color: red; */
   background-repeat: no-repeat;
   /* background-position-y: 45px; */
@@ -18,7 +19,7 @@ body {
   width: 98%;
   margin: auto;
   position: relative;
-  top: 11%;
+  top: 11.5%;
   transform: perspective(1px) translateY(-10%);
   height: 65%;
   padding-right: 10px;
@@ -34,6 +35,7 @@ body {
   box-shadow: 0 2px 6px 0 hsl(0, 0%, 0%, 0.2);
   margin: 10px;
   /* background-color: transparent; */
+  opacity: 0.9;
 }
 #blank {
   width: 1px;
@@ -42,14 +44,14 @@ body {
   margin: 1px;
 }
 #time {
-  font-size: 2em;
+  font-size: 1.85em;
   /* border: 1px solid green; */
   text-align: center;
   margin-top: 26px;
   font-weight: 500;
 }
 #date {
-  font-size: 2em;
+  font-size: 1.85em;
   /* border: 1px solid blue; */
   text-align: center;
   margin-top: 26px;
@@ -75,4 +77,198 @@ body {
 }
 #datetime {
   margin-top: 10px;
+}
+.fab {
+  text-shadow: 1px 1px 1px #808080;
+  margin: 5px;
+}
+.fas {
+  text-shadow: 1px 1px 1px #808080;
+  margin: 5px;
+}
+a:hover {
+  text-decoration: none !important;
+  opacity: 0.8;
+}
+#intro {
+  font-size: 4em;
+  /* text-align: center; */
+  margin-top: -25px;
+}
+#quotes {
+  margin-top: 125px;
+  font-size: 1em;
+}
+#subtitle {
+  margin-top: -5px;
+}
+
+#todo {
+  width: 390px;
+  margin-top: -20px;
+  border-radius: 10px;
+}
+#heading {
+  width: 390px;
+  height: 60px;
+  /* background: #25b99a; */
+  background: #007bff;
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  padding: 10px;
+  z-index: 5;
+
+  position: fixed;
+}
+#heading input {
+  width: 100%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 20px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px 25px 25px 5px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#heading input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#heading input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#heading input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#heading input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+#heading button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  /* position: relative;
+  top: -40px;
+  right: -210px; */
+  z-index: 2;
+
+  border-radius: 25px;
+  background: #fff;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#add:hover {
+  color: #12de61;
+  transition: 0.2s ease;
+}
+.activity {
+  padding-top: 50px;
+}
+.activity li {
+  height: 50px;
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.4em;
+  list-style: none;
+  float: left;
+  margin-left: -20px;
+  /* margin-bottom: 5px; */
+  margin-top: 10px;
+  position: relative;
+  padding-right: 40px;
+  padding-top: 8px;
+  padding-left: 8px;
+}
+.listcontainer {
+  width: 100%;
+  float: left;
+  padding: 10px;
+  height: 455px;
+  overflow-y: scroll;
+
+  background: #e3f2fd;
+  border-radius: 10px;
+}
+.buts button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  border: 0px;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+}
+.buts button:last-of-type:before {
+  content: "";
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: #edf0f1;
+}
+
+.buts {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.remove:hover {
+  color: red;
+  transition: color 0.2s ease;
+}
+.complete:hover {
+  color: #12de61;
+}
+#today {
+  margin-bottom: 15px;
+  margin-top: -15px;
+  text-align: center;
+}
+#quotebox {
+  /* border: 1px solid #ccc; */
+  height: 145px;
+  overflow-y: scroll;
+}
+#completed:not(:empty) {
+  padding-top: 70px;
+}
+
+#completed .buts .complete {
+  color: #12de61;
+}
+#completed:not(:empty):before {
+  content: "";
+  width: 250px;
+  height: 1px;
+  left: 25%;
+
+  margin: -10px;
+  background: #2196f3;
+  position: absolute;
 }
